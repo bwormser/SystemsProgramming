@@ -1,0 +1,7 @@
+code
+explore
+marco
+quick
+rocco
+strings are equal
+value

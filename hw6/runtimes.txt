@@ -1,0 +1,26 @@
+/*******************************************************************************
+ * Name        : runtimes.txt
+ * Author      : Brian Wormser, Michael Karsen
+ * Date        : 4/23/2021
+ * Description : Details runtimes for various mtsieve.c calls.
+ * Pledge      : I pledge my honor that I have abided by the Stevens Honor System.
+ ******************************************************************************/
+
+time ./mtsieve -s100 -e200000000 -t1  : 0m6.395s
+time ./mtsieve -s100 -e200000000 -t2  : 0m6.368s
+time ./mtsieve -s100 -e200000000 -t3  : 0m6.259s
+time ./mtsieve -s100 -e200000000 -t4  : 0m6.256s
+time ./mtsieve -s100 -e200000000 -t5  : 0m6.148s
+time ./mtsieve -s100 -e200000000 -t6  : 0m6.187s
+time ./mtsieve -s100 -e200000000 -t7  : 0m6.105s
+time ./mtsieve -s100 -e200000000 -t8  : 0m5.992s
+time ./mtsieve -s100 -e200000000 -t9  : 0m5.984s
+time ./mtsieve -s100 -e200000000 -t10 : 0m5.936s
+time ./mtsieve -s100 -e200000000 -t11 : 0m5.884s
+time ./mtsieve -s100 -e200000000 -t12 : 0m5.748s
+
+CPU : AMD Ryzen 5 3600 6-Core Processor
+
+Based on our findings it appears that the number of threads decreases the time linearly.
+In all cases, the time of the next thread was slightly lower than the previous one except for
+one case where it instead slighly increased going from 5 to 6 threads.
